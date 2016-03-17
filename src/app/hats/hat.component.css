@@ -1,0 +1,9 @@
+.hat {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+
+    background: #ccc;
+    border-radius: 125px;
+    text-align: center;
+}

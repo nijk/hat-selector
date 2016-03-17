@@ -1,0 +1,13 @@
+<header>
+    <nav>
+        <h1>{{ name }}</h1>
+        <ul>
+            <li router-active>
+                <a [routerLink]=" ['HatSelector'] ">Hats</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
