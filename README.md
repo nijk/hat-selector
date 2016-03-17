@@ -1,6 +1,7 @@
 # Hat selector exercise
      
 ## Approach
+## Approach
 
 - Angular2 (ng2) using Typescript 1.8
 - Favoured Webpack/CommonJS tooling over BrowserSync/SystemJS
