@@ -1,7 +1,7 @@
 {
   "name": "hat-selector",
   "version": "1.0.0",
-  "description": "Select an appropriate choice of hats to wear for a up to 14 days, ensuring that the same style does not appear more than once",
+  "description": "A single page app to allow users to select an appropriate choice of hats to wear for a up to 14 days, ensuring that the same style does not appear more than once",
   "author": "Nick Aspinall",
   "homepage": "https://github.com/nijk/hat-selector",
   "license": "MIT",
