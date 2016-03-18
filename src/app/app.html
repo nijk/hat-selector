@@ -1,11 +1,11 @@
 <header>
-    <nav>
-        <h1>{{ name }}</h1>
-        <ul>
-            <li router-active>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header"><a href="/" class="navbar-brand">{{ name }}</a></div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
                 <a [routerLink]=" ['HatSelector'] ">Hats</a>
-            </li>
-        </ul>
+            </ul>
+        </div>
     </nav>
 </header>
 <main>

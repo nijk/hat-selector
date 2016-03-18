@@ -7,3 +7,34 @@
     border-radius: 125px;
     text-align: center;
 }
+
+.colour-black {
+    color: #fff;
+    background-color: black;
+}
+
+.colour-grey {
+    background-color: #999;
+}
+
+.colour-red {
+    background-color: red;
+}
+
+.colour-green {
+    background-color: green;
+}
+
+.colour-blue {
+    color: #fff;
+    background-color: blue;
+}
+
+.colour-brown {
+    color: #fff;
+    background-color: brown;
+}
+
+.colour-yellow {
+    background-color: yellow;
+}

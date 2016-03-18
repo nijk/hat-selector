@@ -1,20 +1,39 @@
 import { Component, OnInit } from 'angular2/core';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
 
+// Services
+import { HatSelectorService } from './hats.service';
+
+// Interfaces
+import { IHatSelector } from './hat-selector.interface';
+
 // Components
 import { Hat } from './hat.component';
 
 @Component({
   selector: 'hat-selector',
-  providers: [],
+  providers: [ HatSelectorService ],
   directives: [ CORE_DIRECTIVES, FORM_DIRECTIVES, Hat ],
   pipes: [ ],
   styles: [ require('./hat-selector.component.css') ],
   template: require('./hat-selector.component.html')
 })
 export class HatSelector implements OnInit {
-  constructor() {
+  constructor(private _hatSelectorService: HatSelectorService) {
 
+  }
+
+  public model : IHatSelector = {
+    days: 0
+  };
+
+  public submit() {
+
+    this.model.days = <number> this.model.days;
+
+    this._hatSelectorService.getHats(this.model.days);
+
+    console.log('Form was submitted with value', this.model);
   }
 
   hatData = {

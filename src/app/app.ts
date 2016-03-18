@@ -14,21 +14,7 @@ import { HatSelector } from './hats/hat-selector.component';
   selector: 'app',
   pipes: [ ],
   encapsulation: ViewEncapsulation.None,
-  styles: [`
-    nav ul {
-      display: inline;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 60px;
-    }
-    nav li {
-      display: inline;
-    }
-    nav li.active {
-      background-color: lightgray;
-    }
-  `],
+  styles: [ require('../assets/css/bootstrap.min.css') ],
   template: require('./app.html')
 })
 @RouteConfig([

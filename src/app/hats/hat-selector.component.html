@@ -1,3 +1,7 @@
+<form (ngSubmit)="submit()" class="jumbotron">
+  <label>Trip length<input [(ngModel)]="model.days" type="number" placeholder="Number of days" class="form-control" /></label>
+  <button class="btn btn-primary">Choose hats</button>
+</form>
 <div class="hats">
   <hat *ngFor="#hat of hatData.items" [hat]="hat"></hat>
 </div>

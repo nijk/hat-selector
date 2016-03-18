@@ -2,72 +2,72 @@
   "items": [
     {
       "style": "baseball cap",
-      "colour": "red",
+      "colours": ["red", "blue", "yellow", "grey", "black"],
       "imgName": "red-baseball-cap.png"
     },
     {
       "style": "trilby",
-      "colour": "black",
+      "colours": ["red", "blue", "grey", "brown", "black"],
       "imgName": "black-trilby.png"
     },
     {
       "style": "beanie",
-      "colour": "blue",
+      "colours": ["red", "blue", "brown", "black"],
       "imgName": "blue-beanie.png"
     },
     {
       "style": "bowler hat",
-      "colour": "black",
+      "colours": ["grey", "black"],
       "imgName": "black-bowler-hat.png"
     },
     {
       "style": "sombrero",
-      "colour": "yellow",
+      "colours": ["blue", "yellow"],
       "imgName": "yellow-sombrero.png"
     },
     {
       "style": "beret",
-      "colour": "red",
+      "colours": ["red", "blue", "grey", "black"],
       "imgName": "red-beret.png"
     },
     {
       "style": "boater hat",
-      "colour": "yellow",
+      "colours": ["yellow"],
       "imgName": "yellow-boater-hat.png"
     },
     {
       "style": "flat cap",
-      "colour": "brown",
+      "colours": ["green", "grey", "brown", "black"],
       "imgName": "brown-flat-cap.png"
     },
     {
       "style": "deerstalker",
-      "colour": "grey",
+      "colours": ["grey", "brown", "black"],
       "imgName": "grey-deerstalker.png"
     },
     {
       "style": "cowboy hat",
-      "colour": "brown",
+      "colours": ["red", "blue", "brown", "black"],
       "imgName": "brown-cowboy-hat.png"
     },
     {
       "style": "fedora",
-      "colour": "grey",
+      "colours": ["red", "black"],
       "imgName": "grey-fedora.png"
     },
     {
       "style": "top hat",
-      "colour": "blue",
+      "colours": ["blue", "grey", "black"],
       "imgName": "blue-top-hat.png"
     },
     {
       "style": "army cap",
-      "colour": "green",
+      "colours": ["green", "blue", "brown", "black"],
       "imgName": "green-army-cap.png"
     },
     {
       "style": "plumbers cap",
-      "colour": "green",
+      "colours": ["red", "green", "blue"],
       "imgName": "green-plumbers-cap.png"
     }
   ]
