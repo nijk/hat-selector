@@ -10,8 +10,12 @@ import 'angular2/http';
 import 'angular2/router';
 
 // RxJS
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
+require('rxjs/add/operator/catch');
+require('rxjs/add/operator/do');
+require('rxjs/add/operator/filter');
+require('rxjs/add/operator/map');
+require('rxjs/add/operator/mergeMap');
+require('rxjs/add/observable/throw');
 
 if ('production' === ENV) {
   // Production
