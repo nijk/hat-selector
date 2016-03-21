@@ -61,6 +61,20 @@ export class HatSelectorService {
     }
 
     /**
+     * Randomize array element order in-place.
+     * Using Durstenfeld shuffle algorithm.
+     */
+    private _shuffleArray(array: Array) : any {
+        for (var i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+    /**
      * Fetch the raw hat data from the resource
      * @returns { Observable<R> }
      * @private
@@ -68,7 +82,8 @@ export class HatSelectorService {
     private _fetchData() : Observable<any> {
         return this._http.get('/app/hats/hat-data.json')
             .map(res => res.json())
-            .map(data => data.items)
+            // _shuffleArray is used here to provide a more interesting results sets if data is re-fetched
+            .map(data => this._shuffleArray(data.items))
             .catch(e => this._handleError(e));
     }
 
