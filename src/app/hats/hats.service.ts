@@ -20,63 +20,84 @@ export class HatSelectorService {
         console.log('HatSelectorService', MIN_DAYS, MAX_DAYS);
     }
 
-    private _hatData: IHat[];
+    private _hats: IHatSelector;
 
-    
-    public getHats(days: number) : any {
-        if (days < MIN_DAYS) {
-            return new Error(`Number of days must be at least ${MIN_DAYS}`);
-        }
-        if (days > MAX_DAYS) {
-            return new Error(`Number of days must be no more than ${MAX_DAYS}`);
-        }
-
-        return this._fetchData().subscribe(
-            data => this._filterHats(days),
-            e => this._handleError(e)
-        );
+    /**
+     *
+     * @returns {{days: number, hats: Array, styles: Array}}
+     */
+    public resetHats() {
+        return this._hats = { days: 0, hats: [], styles: [] };
     }
 
-    private _fetchData() : any {
+    /**
+     * Get hats for the given a number of days
+     * @param days
+     * @returns { Observable | ErrorObservable }
+     */
+    public getHats(days: number) : Observable<any> {
+        // Reset old data
+        this.resetHats();
+
+        if (days < MIN_DAYS) {
+            return Observable.throw(new Error(`Number of days must be at least ${MIN_DAYS}`));
+        }
+        if (days > MAX_DAYS) {
+            return Observable.throw(new Error(`Number of days must be no more than ${MAX_DAYS}`));
+        }
+
+        this._hats.days = days;
+
+        return Observable.create(observer => this._fetchData().subscribe(
+            data => this._filterHats(data).subscribe(
+                () => observer.next(this._hats),
+                e => this._handleError(e)
+            ),
+            e => this._handleError(e)
+        ));
+    }
+
+    /**
+     * Fetch the raw hat data from the resource
+     * @returns { Observable<R> }
+     * @private
+     */
+    private _fetchData() : Observable<any> {
         return this._http.get('/app/hats/hat-data.json')
             .map(res => res.json())
-            .map(data => this._hatData = data.items)
+            .map(data => data.items)
             .catch(e => this._handleError(e));
     }
 
-    private _filterHats(number: number) : any {
-        let res: IHatSelector = {
-            days: number,
-            hats: [],
-            styles: []
-        };
-
+    /**
+     * Filter the hats so that only one style is provided from a given number of days
+     * @param hats
+     * @returns { Observable<any> }
+     * @private
+     */
+    private _filterHats(hats: IHat[]) : Observable<any> {
         // @fixme: The typescript definition does not match with the Rx documentation here,
         // so the apparently optional 2nd argument is required to stop the TS linter from complaining
-        return Observable.from(this._hatData, (item: IHat) => item).subscribe(
-            (item: IHat) => {
-                if (res.days === res.styles.length) {
+        return Observable.create(observer => Observable.from(hats, item => item).subscribe(
+            (hat: IHat) => {
+                // Ensure the hat.style is not already in use
+                // Ensure the required number of hats is not exceeded
+                if (this._hats.styles.indexOf(hat.style) >= 0 || this._hats.days === this._hats.styles.length) {
                     return;
                 }
 
-                console.info('Hat data item', item);
-
-                if (res.styles.indexOf(item.style) >= 0) {
-                    console.info('This style is already selected', item.style);
-                } else {
-                    res.styles.push(item.style);
-                    res.hats.push(item);
-                }
+                this._hats.styles.push(hat.style);
+                this._hats.hats.push(hat);
             },
-            e => this._handleError(e),
-            () => console.log(res)
-        );
+            e => observer.error(e),
+            () => observer.next()
+        ));
     }
 
     /**
      * Error handler
      * @param error
-     * @returns {ErrorObservable}
+     * @returns { ErrorObservable }
      * @private
      */
     private _handleError (error: Response) {

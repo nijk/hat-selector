@@ -3,5 +3,5 @@
   <button class="btn btn-primary">Choose hats</button>
 </form>
 <div class="hats">
-  <hat *ngFor="#hat of hatData.items" [hat]="hat"></hat>
+  <hat *ngFor="#hat of model.hats" [hat]="hat"></hat>
 </div>
