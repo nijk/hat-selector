@@ -64,7 +64,7 @@ export class HatSelectorService {
      * Randomize array element order in-place.
      * Using Durstenfeld shuffle algorithm.
      */
-    private _shuffleArray(array: Array) : any {
+    private _shuffleArray(array: Array<any>) : any {
         for (var i = array.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
             let temp = array[i];

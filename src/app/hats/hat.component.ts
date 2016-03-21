@@ -10,7 +10,7 @@ import { IHat } from './hat.interface';
 @Component({
     selector: 'hat',
     template: require('./hat.component.html'),
-    styles: [ require('./hat.component.css') ]
+    styles: [ require('./hat.component.scss') ]
 })
 export class Hat {
     constructor (){

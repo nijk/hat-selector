@@ -1,0 +1,53 @@
+.hat {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+}
+
+.hat-img {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+
+    border-radius: 125px;
+}
+
+.hat-img {
+    img {
+        width: 150px;
+    }
+
+    &.colour-black {
+        background-color: rgba(#000, 0.75);
+
+        img {
+            color: #fff;
+            fill: currentColor;
+        }
+    }
+
+    &.colour-grey {
+        background-color: rgba(#999, 0.5);
+    }
+
+    &.colour-red {
+        background-color: rgba(#f00, 0.5);
+    }
+
+    &.colour-green {
+        background-color: rgba(#0f0, 0.5);
+    }
+
+    &.colour-blue {
+        background-color: rgba(#00f, 0.5);
+    }
+
+    &.colour-brown {
+        background-color: rgba(#7c0909, 0.5);
+    }
+
+    &.colour-yellow {
+        background-color: rgba(#ffee00, 0.5);
+    }
+}
