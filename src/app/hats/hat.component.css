@@ -1,16 +1,31 @@
 .hat {
     display: inline-block;
     width: 250px;
+    text-align: center;
+}
+
+.hat-img {
+    display: flex;
+    justify-content: center;
+    width: 250px;
     height: 250px;
 
     background: #ccc;
     border-radius: 125px;
-    text-align: center;
+}
+
+.hat-img img {
+    width: 150px;
+}
+
+.colour-black img {
+    color: #fff;
+    fill: currentColor;
 }
 
 .colour-black {
     color: #fff;
-    background-color: black;
+    background-color: #333;
 }
 
 .colour-grey {

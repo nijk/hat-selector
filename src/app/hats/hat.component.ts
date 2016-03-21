@@ -4,6 +4,9 @@
 
 import { Component, Input } from 'angular2/core';
 
+// Interfaces
+import { IHat } from './hat.interface';
+
 @Component({
     selector: 'hat',
     template: require('./hat.component.html'),
@@ -14,5 +17,7 @@ export class Hat {
 
     }
 
-    @Input() hat;
+    @Input() hat : IHat;
+
+    @Input() day : number;
 }

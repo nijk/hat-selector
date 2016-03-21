@@ -71,14 +71,14 @@
       "imgName": "bowler-hat"
     },
     {
-      "style": "sombrero",
+      "style": "chefs-hat",
       "colour": "blue",
-      "imgName": "sombrero"
+      "imgName": "chefs-hat"
     },
     {
-      "style": "sombrero",
+      "style": "chefs-hat",
       "colour": "yellow",
-      "imgName": "sombrero"
+      "imgName": "chefs-hat"
     },
     {
       "style": "beret",
@@ -101,29 +101,29 @@
       "imgName": "beret"
     },
     {
-      "style": "boater hat",
-      "colour": "yellow",
-      "imgName": "boater-hat"
+      "style": "wizards hat",
+      "colour": "blue",
+      "imgName": "wizards-hat"
     },
     {
-      "style": "flat cap",
+      "style": "firemans hat",
       "colour": "green",
-      "imgName": "flat-cap"
+      "imgName": "firemans-hat"
     },
     {
-      "style": "flat cap",
+      "style": "firemans hat",
       "colour": "grey",
-      "imgName": "flat-cap"
+      "imgName": "firemans-hat"
     },
     {
-      "style": "flat cap",
+      "style": "firemans hat",
       "colour": "brown",
-      "imgName": "flat-cap"
+      "imgName": "firemans-hat"
     },
     {
-      "style": "flat cap",
+      "style": "firemans hat",
       "colour": "black",
-      "imgName": "flat-cap"
+      "imgName": "firemans-hat"
     },
     {
       "style": "deerstalker",
@@ -186,39 +186,39 @@
       "imgName": "top-hat"
     },
     {
-      "style": "army cap",
+      "style": "jesters hat",
       "colour": "green",
-      "imgName": "army-cap"
+      "imgName": "jesters-hat"
     },
     {
-      "style": "army cap",
+      "style": "jesters hat",
       "colour": "blue",
-      "imgName": "army-cap"
+      "imgName": "jesters-hat"
     },
     {
-      "style": "army cap",
+      "style": "jesters hat",
       "colour": "brown",
-      "imgName": "army-cap"
+      "imgName": "jesters-hat"
     },
     {
-      "style": "army cap",
+      "style": "jesters hat",
       "colour": "black",
-      "imgName": "army-cap"
+      "imgName": "jesters-hat"
     },
     {
-      "style": "plumbers cap",
+      "style": "pilots hat",
       "colour": "red",
-      "imgName": "plumbers-cap"
+      "imgName": "pilots-hat"
     },
     {
-      "style": "plumbers cap",
+      "style": "pilots hat",
       "colour": "green",
-      "imgName": "plumbers-cap"
+      "imgName": "pilots-hat"
     },
     {
-      "style": "plumbers cap",
+      "style": "pilots hat",
       "colour": "blue",
-      "imgName": "plumbers-cap"
+      "imgName": "pilots-hat"
     }
   ]
 }
