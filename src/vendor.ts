@@ -16,6 +16,7 @@ require('rxjs/add/operator/filter');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/mergeMap');
 require('rxjs/add/observable/throw');
+require('rxjs/add/observable/from');
 
 if ('production' === ENV) {
   // Production

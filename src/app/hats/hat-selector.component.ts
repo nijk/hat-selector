@@ -24,7 +24,9 @@ export class HatSelector implements OnInit {
   }
 
   public model : IHatSelector = {
-    days: 0
+    days: 0,
+    hats: [],
+    styles: []
   };
 
   public submit() {

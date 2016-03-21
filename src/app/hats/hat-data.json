@@ -2,73 +2,223 @@
   "items": [
     {
       "style": "baseball cap",
-      "colours": ["red", "blue", "yellow", "grey", "black"],
-      "imgName": "red-baseball-cap.png"
+      "colour": "red",
+      "imgName": "baseball-cap"
+    },
+    {
+      "style": "baseball cap",
+      "colour": "blue",
+      "imgName": "baseball-cap"
+    },
+    {
+      "style": "baseball cap",
+      "colour": "yellow",
+      "imgName": "baseball-cap"
+    },
+    {
+      "style": "baseball cap",
+      "colour": "black",
+      "imgName": "baseball-cap"
     },
     {
       "style": "trilby",
-      "colours": ["red", "blue", "grey", "brown", "black"],
-      "imgName": "black-trilby.png"
+      "colour": "blue",
+      "imgName": "trilby"
+    },
+    {
+      "style": "trilby",
+      "colour": "grey",
+      "imgName": "trilby"
+    },
+    {
+      "style": "trilby",
+      "colour": "brown",
+      "imgName": "trilby"
+    },
+    {
+      "style": "trilby",
+      "colour": "black",
+      "imgName": "trilby"
     },
     {
       "style": "beanie",
-      "colours": ["red", "blue", "brown", "black"],
-      "imgName": "blue-beanie.png"
+      "colour": "red",
+      "imgName": "beanie"
+    },
+    {
+      "style": "beanie",
+      "colour": "blue",
+      "imgName": "beanie"
+    },
+    {
+      "style": "beanie",
+      "colour": "yellow",
+      "imgName": "beanie"
+    },
+    {
+      "style": "beanie",
+      "colour": "black",
+      "imgName": "beanie"
     },
     {
       "style": "bowler hat",
-      "colours": ["grey", "black"],
-      "imgName": "black-bowler-hat.png"
+      "colour": "grey",
+      "imgName": "bowler-hat"
+    },
+    {
+      "style": "bowler hat",
+      "colour": "black",
+      "imgName": "bowler-hat"
     },
     {
       "style": "sombrero",
-      "colours": ["blue", "yellow"],
-      "imgName": "yellow-sombrero.png"
+      "colour": "blue",
+      "imgName": "sombrero"
+    },
+    {
+      "style": "sombrero",
+      "colour": "yellow",
+      "imgName": "sombrero"
     },
     {
       "style": "beret",
-      "colours": ["red", "blue", "grey", "black"],
-      "imgName": "red-beret.png"
+      "colour": "red",
+      "imgName": "beret"
+    },
+    {
+      "style": "beret",
+      "colour": "blue",
+      "imgName": "beret"
+    },
+    {
+      "style": "beret",
+      "colour": "grey",
+      "imgName": "beret"
+    },
+    {
+      "style": "beret",
+      "colour": "black",
+      "imgName": "beret"
     },
     {
       "style": "boater hat",
-      "colours": ["yellow"],
-      "imgName": "yellow-boater-hat.png"
+      "colour": "yellow",
+      "imgName": "boater-hat"
     },
     {
       "style": "flat cap",
-      "colours": ["green", "grey", "brown", "black"],
-      "imgName": "brown-flat-cap.png"
+      "colour": "green",
+      "imgName": "flat-cap"
+    },
+    {
+      "style": "flat cap",
+      "colour": "grey",
+      "imgName": "flat-cap"
+    },
+    {
+      "style": "flat cap",
+      "colour": "brown",
+      "imgName": "flat-cap"
+    },
+    {
+      "style": "flat cap",
+      "colour": "black",
+      "imgName": "flat-cap"
     },
     {
       "style": "deerstalker",
-      "colours": ["grey", "brown", "black"],
-      "imgName": "grey-deerstalker.png"
+      "colour": "grey",
+      "imgName": "deerstalker"
+    },
+    {
+      "style": "deerstalker",
+      "colour": "brown",
+      "imgName": "deerstalker"
+    },
+    {
+      "style": "deerstalker",
+      "colour": "black",
+      "imgName": "deerstalker"
     },
     {
       "style": "cowboy hat",
-      "colours": ["red", "blue", "brown", "black"],
-      "imgName": "brown-cowboy-hat.png"
+      "colour": "red",
+      "imgName": "cowboy-hat"
+    },
+    {
+      "style": "cowboy hat",
+      "colour": "blue",
+      "imgName": "cowboy-hat"
+    },
+    {
+      "style": "cowboy hat",
+      "colour": "brown",
+      "imgName": "cowboy-hat"
+    },
+    {
+      "style": "cowboy hat",
+      "colour": "black",
+      "imgName": "cowboy-hat"
     },
     {
       "style": "fedora",
-      "colours": ["red", "black"],
-      "imgName": "grey-fedora.png"
+      "colour": "red",
+      "imgName": "fedora"
+    },
+    {
+      "style": "fedora",
+      "colour": "black",
+      "imgName": "fedora"
     },
     {
       "style": "top hat",
-      "colours": ["blue", "grey", "black"],
-      "imgName": "blue-top-hat.png"
+      "colour": "blue",
+      "imgName": "top-hat"
+    },
+    {
+      "style": "top hat",
+      "colour": "grey",
+      "imgName": "top-hat"
+    },
+    {
+      "style": "top hat",
+      "colour": "black",
+      "imgName": "top-hat"
     },
     {
       "style": "army cap",
-      "colours": ["green", "blue", "brown", "black"],
-      "imgName": "green-army-cap.png"
+      "colour": "green",
+      "imgName": "army-cap"
+    },
+    {
+      "style": "army cap",
+      "colour": "blue",
+      "imgName": "army-cap"
+    },
+    {
+      "style": "army cap",
+      "colour": "brown",
+      "imgName": "army-cap"
+    },
+    {
+      "style": "army cap",
+      "colour": "black",
+      "imgName": "army-cap"
     },
     {
       "style": "plumbers cap",
-      "colours": ["red", "green", "blue"],
-      "imgName": "green-plumbers-cap.png"
+      "colour": "red",
+      "imgName": "plumbers-cap"
+    },
+    {
+      "style": "plumbers cap",
+      "colour": "green",
+      "imgName": "plumbers-cap"
+    },
+    {
+      "style": "plumbers cap",
+      "colour": "blue",
+      "imgName": "plumbers-cap"
     }
   ]
 }
