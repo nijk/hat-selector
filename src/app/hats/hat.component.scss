@@ -1,53 +1,110 @@
+$colour-black: #000;
+$colour-grey: #999;
+$colour-red: #f00;
+$colour-green: #0f0;
+$colour-blue: #00f;
+$colour-brown: #7c0909;
+$colour-yellow: #ffee00;
+
 .hat {
     display: inline-block;
     width: 250px;
     text-align: center;
-}
 
-.hat-img {
-    display: flex;
-    justify-content: center;
-    width: 250px;
-    height: 250px;
+    &:hover {
+        .hat-img {
+            transform: rotateY(180deg);
+        }
 
-    border-radius: 125px;
-}
-
-.hat-img {
-    img {
-        width: 150px;
+        .hat-svg {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     &.colour-black {
-        background-color: rgba(#000, 0.75);
+        .hat-img {
+            background-color: rgba($colour-black, 0.75);
+        }
 
-        img {
-            color: #fff;
-            fill: currentColor;
+        .hat-svg {
+            color: rgba($colour-black, 0.75);
         }
     }
 
     &.colour-grey {
-        background-color: rgba(#999, 0.5);
+        .hat-img {
+            background-color: rgba($colour-grey, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-grey, 0.75);
+        }
     }
 
     &.colour-red {
-        background-color: rgba(#f00, 0.5);
+        .hat-img {
+            background-color: rgba($colour-red, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-red, 0.75);
+        }
     }
 
     &.colour-green {
-        background-color: rgba(#0f0, 0.5);
+        .hat-img {
+            background-color: rgba($colour-green, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-green, 0.75);
+        }
     }
 
     &.colour-blue {
-        background-color: rgba(#00f, 0.5);
+        .hat-img {
+            background-color: rgba($colour-blue, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-blue, 0.75);
+        }
     }
 
     &.colour-brown {
-        background-color: rgba(#7c0909, 0.5);
+        .hat-img {
+            background-color: rgba($colour-brown, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-brown, 0.75);
+        }
     }
 
     &.colour-yellow {
-        background-color: rgba(#ffee00, 0.5);
+        .hat-img {
+            background-color: rgba($colour-yellow, 0.5);
+        }
+
+        .hat-svg {
+            color: rgba($colour-yellow, 0.75);
+        }
+    }
+}
+
+.hat-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    transition: transform 0.35s;
+
+    .hat-svg {
+        width: 150px;
+        height: 150px;
+        transition: all 0.2s;
     }
 }

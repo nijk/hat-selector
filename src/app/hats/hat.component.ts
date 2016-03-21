@@ -7,8 +7,12 @@ import { Component, Input } from 'angular2/core';
 // Interfaces
 import { IHat } from './hat.interface';
 
+// Components
+import { SvgComponent } from '../svg/svg.component';
+
 @Component({
     selector: 'hat',
+    directives: [ SvgComponent ],
     template: require('./hat.component.html'),
     styles: [ require('./hat.component.scss') ]
 })

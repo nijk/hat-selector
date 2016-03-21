@@ -1,7 +1,7 @@
-<div class="hat">
+<div class="hat colour-{{hat.colour}}">
     <h2>Day: {{day}}</h2>
     <h3>{{hat.colour}} {{hat.style}}</h3>
-    <div class="hat-img colour-{{hat.colour}}">
-        <img src="/assets/img/hats/{{hat.imgName}}.svg" />
+    <div class="hat-img">
+        <svg-comp src="/assets/img/hats/{{hat.imgName}}.svg" class="hat-svg"></svg-comp>
     </div>
 </div>
