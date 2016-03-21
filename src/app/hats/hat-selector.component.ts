@@ -28,7 +28,7 @@ export class HatSelector implements OnInit {
   public submit() {
     this._hatSelectorService.getHats(this.model.days).subscribe(
         data => this.model = data,
-        (e) => console.warn('Error', e)
+        (e) => console.warn(e)
     );
   }
 

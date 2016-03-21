@@ -17,7 +17,7 @@ const MAX_DAYS: number = 14;
 @Injectable()
 export class HatSelectorService {
     constructor(private _http: Http){
-        console.log('HatSelectorService', MIN_DAYS, MAX_DAYS);
+
     }
 
     private _hats: IHatSelector;
@@ -51,9 +51,12 @@ export class HatSelectorService {
         return Observable.create(observer => this._fetchData().subscribe(
             data => this._filterHats(data).subscribe(
                 () => observer.next(this._hats),
-                e => this._handleError(e)
+                e => observer.error(e)
             ),
-            e => this._handleError(e)
+            e => {
+                console.warn('getHats', e);
+                return e;
+            }
         ));
     }
 
@@ -101,9 +104,11 @@ export class HatSelectorService {
      * @private
      */
     private _handleError (error: Response) {
-        const errorMessage = (error.json() ||  { message: 'Server error' }).message;
+        //console.warn('handlerError', error, typeof error);
 
-        console.error(errorMessage, error.json());
+        let errorMessage = error.text() || 'Server error';
+
+        console.error(errorMessage);
         return Observable.throw(new Error(errorMessage));
     }
 }
