@@ -1,6 +1,6 @@
 <form (ngSubmit)="submit()" class="jumbotron">
   <p>Choose the number of days for your trip and let the hat selector pick your head gear for the trip!</p>
-  <label>Trip length<input [(ngModel)]="model.days" type="number" placeholder="Number of days" class="form-control" /></label>
+  <label>Trip length<input [(ngModel)]="model.days" type="number" placeholder="Number of days" class="form-control" autofocus/></label>
   <button class="btn btn-primary">Choose hats</button>
   <button *ngIf="hasHats()" (click)="reset()" class="btn btn-link">Reset</button>
 </form>
