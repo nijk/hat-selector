@@ -2,7 +2,7 @@ import { Component, OnInit } from 'angular2/core';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from 'angular2/common';
 
 // Services
-import { MessagesService } from "../messages/messages.service";
+import { MessagesService } from '../messages/messages.service';
 import { HatSelectorService } from './hats.service';
 
 // Interfaces
@@ -45,7 +45,9 @@ export class HatSelector implements OnInit {
     this._hatSelectorService.getHats(this.model.days).subscribe(
         data => {
           this.model = data;
-          this._messagesService.addMessage(`Hats for your ${this.model.days} day trip are displayed below`, 'success', true);
+          this._messagesService.addMessage(
+              `Hats for your ${this.model.days} day trip are displayed below`, 'success', true
+          );
         },
         e => this._messagesService.addMessage(<string> e, 'danger', false)
     );

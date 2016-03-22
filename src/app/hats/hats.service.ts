@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 
 // Interfaces
 import { IHat } from './hat.interface';
-import { IHatSelector } from "./hat-selector.interface";
+import { IHatSelector } from './hat-selector.interface';
 
 // Constants
 const MIN_DAYS: number = 1;
@@ -16,14 +16,14 @@ const MAX_DAYS: number = 14;
 
 @Injectable()
 export class HatSelectorService {
-    constructor(private _http: Http){
+    constructor(private _http: Http) {
 
     }
 
     private _hats: IHatSelector;
 
     /**
-     *
+     * Reset Hats
      * @returns {{days: number, hats: Array, styles: Array}}
      */
     public resetHats() {
@@ -82,7 +82,7 @@ export class HatSelectorService {
     private _fetchData() : Observable<any> {
         return this._http.get('/app/hats/hat-data.json')
             .map(res => res.json())
-            // _shuffleArray is used here to provide a more interesting results sets if data is re-fetched
+            // _shuffleArray is used to provide more interesting results sets if data is re-fetched
             .map(data => this._shuffleArray(data.items))
             .catch(e => this._handleError(e));
     }
@@ -95,12 +95,13 @@ export class HatSelectorService {
      */
     private _filterHats(hats: IHat[]) : Observable<any> {
         // @fixme: The typescript definition does not match with the Rx documentation here,
-        // so the apparently optional 2nd argument is required to stop the TS linter from complaining
+        // so the optional 2nd argument is required to stop the TS linter from complaining
         return Observable.create(observer => Observable.from(hats, item => item).subscribe(
             (hat: IHat) => {
                 // Ensure the hat.style is not already in use
                 // Ensure the required number of hats is not exceeded
-                if (this._hats.styles.indexOf(hat.style) >= 0 || this._hats.days === this._hats.styles.length) {
+                if (this._hats.styles.indexOf(hat.style) >= 0
+                    || this._hats.days === this._hats.styles.length) {
                     return;
                 }
 

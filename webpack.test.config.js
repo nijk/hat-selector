@@ -54,6 +54,7 @@ module.exports = {
       },
       { test: /\.json$/, loader: 'json-loader', exclude: [ helpers.root('src/index.html') ] },
       { test: /\.html$/, loader: 'raw-loader', exclude: [ helpers.root('src/index.html') ] },
+      { test: /\.s(a|c)ss$/, loaders: ['raw-loader','sass-loader'], exclude: [ helpers.root('src/index.html') ] },
       { test: /\.css$/,  loader: 'raw-loader', exclude: [ helpers.root('src/index.html') ] }
     ],
     postLoaders: [

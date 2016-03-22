@@ -17,7 +17,7 @@ import { SvgComponent } from '../svg/svg.component';
     styles: [ require('./hat.component.scss') ]
 })
 export class Hat {
-    constructor (){
+    constructor () {
 
     }
 

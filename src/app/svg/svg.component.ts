@@ -6,11 +6,11 @@ import { Http, Response } from 'angular2/http';
     template: `<div [innerHTML]="iconData"></div>`
 })
 export class SvgComponent implements OnInit {
-    @Input() src:string;
+    @Input() src : string;
 
-    private iconData:string = '';
+    private iconData : string = '';
 
-    constructor(private http: Http) {
+    constructor(private _http: Http) {
     }
 
     ngOnInit() {
@@ -18,11 +18,11 @@ export class SvgComponent implements OnInit {
     }
 
     loadSvg() {
-        this.http.get( this.src )
+        this._http.get( this.src )
             .map( (res: Response) => res.text() )
             .subscribe(
-                data => { this.iconData = data },
-                err => { console.error(err) }
+                data => this.iconData = data,
+                err => console.error(err)
             );
     }
 }
