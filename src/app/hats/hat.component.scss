@@ -1,19 +1,32 @@
+$colour-white: #fff;
 $colour-black: #000;
 $colour-grey: #999;
-$colour-red: #f00;
-$colour-green: #0f0;
-$colour-blue: #00f;
-$colour-brown: #7c0909;
-$colour-yellow: #ffee00;
+$colour-red: #ff1300;
+$colour-green: #00d86d;
+$colour-blue: #0039ff;
+$colour-brown: #5e2f12;
+$colour-yellow: #ffb500;
 
-.hat {
-    display: inline-block;
-    width: 250px;
-    text-align: center;
-    cursor: pointer;
+@mixin hat-content($colour: $colour-black) {
+    .hat-icon {
+        border-color: $colour;
+    }
+    .hat-icon, .heading {
+        color: $colour;
+        background-color: rgba($colour, 0.25);
+    }
+
+    .heading-day {
+        color: $colour-white;
+        background-color: $colour;
+    }
+
+    .hat-svg {
+        color: rgba($colour, 0.9);
+    }
 
     &:hover {
-        .hat-img {
+        .hat-icon {
             transform: rotateY(180deg);
         }
 
@@ -22,90 +35,73 @@ $colour-yellow: #ffee00;
             height: 200px;
         }
     }
-
-    &.colour-black {
-        .hat-img {
-            background-color: rgba($colour-black, 0.75);
-        }
-
-        .hat-svg {
-            color: rgba($colour-black, 0.75);
-        }
-    }
-
-    &.colour-grey {
-        .hat-img {
-            background-color: rgba($colour-grey, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-grey, 0.75);
-        }
-    }
-
-    &.colour-red {
-        .hat-img {
-            background-color: rgba($colour-red, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-red, 0.75);
-        }
-    }
-
-    &.colour-green {
-        .hat-img {
-            background-color: rgba($colour-green, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-green, 0.75);
-        }
-    }
-
-    &.colour-blue {
-        .hat-img {
-            background-color: rgba($colour-blue, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-blue, 0.75);
-        }
-    }
-
-    &.colour-brown {
-        .hat-img {
-            background-color: rgba($colour-brown, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-brown, 0.75);
-        }
-    }
-
-    &.colour-yellow {
-        .hat-img {
-            background-color: rgba($colour-yellow, 0.5);
-        }
-
-        .hat-svg {
-            color: rgba($colour-yellow, 0.75);
-        }
-    }
 }
 
-.hat-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hat {
+    display: inline-block;
     width: 250px;
-    height: 250px;
-    border-radius: 125px;
-    transition: transform 0.35s;
+    margin: 2.5rem;
+    cursor: pointer;
+
+    .heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .heading-day, .heading-hat {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .heading-day {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .hat-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
+        transition: transform 0.35s;
+        border: 6px solid transparent;
+
+    }
 
     .hat-svg {
         width: 150px;
         height: 150px;
         transition: all 0.2s;
+    }
+
+    &.colour-black {
+        @include hat-content($colour-black);
+    }
+
+    &.colour-grey {
+        @include hat-content($colour-grey);
+    }
+
+    &.colour-red {
+        @include hat-content($colour-red);
+    }
+
+    &.colour-green {
+        @include hat-content($colour-green);
+    }
+
+    &.colour-blue {
+        @include hat-content($colour-blue);
+    }
+
+    &.colour-brown {
+        @include hat-content($colour-brown);
+    }
+
+    &.colour-yellow {
+        @include hat-content($colour-yellow);
     }
 }
