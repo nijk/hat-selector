@@ -120,8 +120,6 @@ export class HatSelectorService {
      * @private
      */
     private _handleError (error: Response) {
-        //console.warn('handlerError', error, typeof error);
-
         let errorMessage = error.text() || 'Server error';
 
         console.error(errorMessage);
