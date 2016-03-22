@@ -4,6 +4,10 @@
 import { Component, ViewEncapsulation } from 'angular2/core';
 import { RouteConfig, Router } from 'angular2/router';
 
+// Services
+import { MessagesService } from './messages/messages.service';
+
+// Components
 import { HatSelector } from './hats/hat-selector.component';
 
 /*
@@ -13,8 +17,9 @@ import { HatSelector } from './hats/hat-selector.component';
 @Component({
   selector: 'app',
   pipes: [ ],
+  providers: [ MessagesService ],
   encapsulation: ViewEncapsulation.None,
-  styles: [ require('../assets/css/bootstrap.min.css') ],
+  styles: [ require('../assets/css/bootstrap.min.css'), require('./app.scss') ],
   template: require('./app.html')
 })
 @RouteConfig([

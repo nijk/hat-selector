@@ -1,0 +1,29 @@
+.navbar {
+    margin-bottom: 2rem;
+    border-radius: 0;
+}
+
+.container-fluid {
+    .jumbotron {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+.well {
+    max-width: 630px;
+
+    &.well-sm {
+        margin-bottom: 1rem;
+    }
+
+    .form-inline {
+        position: relative;
+        margin-bottom: -0.5rem;
+    }
+}

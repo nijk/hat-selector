@@ -3,11 +3,17 @@
         <div class="navbar-header"><a href="/" class="navbar-brand">{{ name }}</a></div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <a [routerLink]=" ['HatSelector'] ">Hats</a>
+                <li router-active><a [routerLink]=" ['HatSelector'] ">Hats</a></li>
             </ul>
         </div>
     </nav>
 </header>
 <main>
-    <router-outlet></router-outlet>
+    <div class="main-container container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
 </main>
