@@ -10,10 +10,12 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'jasmine-matchers'],
 
     // list of files to exclude
     exclude: [ ],
+
+    //plugins: ['karma-jasmine', 'karma-jasmine-matchers'],
 
     // list of files / patterns to load in the browser
     // we are building the test environment in ./spec-bundle.js
