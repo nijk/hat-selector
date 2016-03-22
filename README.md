@@ -7,10 +7,12 @@
 - Favoured Webpack/CommonJS tooling over BrowserSync/SystemJS
 - Bootstrap v3 CSS Framework
 - Features:
-    - 
+    - SVG Component for including inline SVGs
+    - Messages for handling & displaying user messages
+    - Hats for handling the display & business logic for hat data
     
 - ng2 services:
-    -  
+    - Hats service to fetch, store & reset hat data and handle errors
     
 ## Improvements/Considerations
 
@@ -30,7 +32,7 @@ To fully complete this project to production standards, the items that I would a
 
 ## Run application
 
-`npm run build`
+`npm run server`
 
 Visit [http://localhost:3000/]().
 
