@@ -36,9 +36,7 @@ export class HatSelector implements OnInit {
     event.preventDefault();
     this._messagesService.clearMessages();
 
-    if (this.model.days > 0) {
-      this.model = this._hatSelectorService.resetHats();
-    }
+    this.model = this._hatSelectorService.resetHats();
   }
 
   public submit() {
