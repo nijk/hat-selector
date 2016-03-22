@@ -21,24 +21,24 @@
       "imgName": "baseball-cap"
     },
     {
-      "style": "trilby",
+      "style": "mortar board",
       "colour": "blue",
-      "imgName": "trilby"
+      "imgName": "mortar-board"
     },
     {
-      "style": "trilby",
+      "style": "mortar board",
       "colour": "grey",
-      "imgName": "trilby"
+      "imgName": "mortar-board"
     },
     {
-      "style": "trilby",
+      "style": "mortar board",
       "colour": "brown",
-      "imgName": "trilby"
+      "imgName": "mortar-board"
     },
     {
-      "style": "trilby",
+      "style": "mortar board",
       "colour": "black",
-      "imgName": "trilby"
+      "imgName": "mortar-board"
     },
     {
       "style": "beanie",
@@ -106,39 +106,39 @@
       "imgName": "wizards-hat"
     },
     {
-      "style": "firemans hat",
+      "style": "fire hat",
       "colour": "green",
-      "imgName": "firemans-hat"
+      "imgName": "fire-hat"
     },
     {
-      "style": "firemans hat",
+      "style": "fire hat",
       "colour": "grey",
-      "imgName": "firemans-hat"
+      "imgName": "fire-hat"
     },
     {
-      "style": "firemans hat",
+      "style": "fire hat",
       "colour": "brown",
-      "imgName": "firemans-hat"
+      "imgName": "fire-hat"
     },
     {
-      "style": "firemans hat",
+      "style": "fire hat",
       "colour": "black",
-      "imgName": "firemans-hat"
+      "imgName": "fire-hat"
     },
     {
-      "style": "deerstalker",
+      "style": "police hat",
       "colour": "grey",
-      "imgName": "deerstalker"
+      "imgName": "police-hat"
     },
     {
-      "style": "deerstalker",
-      "colour": "brown",
-      "imgName": "deerstalker"
+      "style": "police hat",
+      "colour": "blue",
+      "imgName": "police-hat"
     },
     {
-      "style": "deerstalker",
+      "style": "police hat",
       "colour": "black",
-      "imgName": "deerstalker"
+      "imgName": "police-hat"
     },
     {
       "style": "cowboy hat",
