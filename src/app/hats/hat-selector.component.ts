@@ -28,9 +28,21 @@ export class HatSelector implements OnInit {
 
   public model : IHatSelector;
 
-  public submit() {
+  public hasHats() {
+    return this.model.hats.length > 0;
+  }
+
+  public reset() {
+    event.preventDefault();
     this._messagesService.clearMessages();
 
+    if (this.model.days > 0) {
+      this.model = this._hatSelectorService.resetHats();
+    }
+  }
+
+  public submit() {
+    this._messagesService.clearMessages();
 
     this._hatSelectorService.getHats(this.model.days).subscribe(
         data => {
