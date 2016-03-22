@@ -18,6 +18,7 @@
 
 To fully complete this project to production standards, the items that I would address are:
 
+- Fix the leading zero on the trip input field if value entered via keys
 - Unit testing
 - End 2 end testing
 - Test cross browser/device & fix any issues
